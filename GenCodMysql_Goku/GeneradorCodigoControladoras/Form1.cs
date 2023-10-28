@@ -86,7 +86,7 @@ namespace GeneradorCodigoControladoras
             try
             {
                 DataSet ds = new DataSet("Tabla");
-                ds = ImportarSQL.TablasSqlServer(BaseDatos.ConnectionString);
+                ds = ImportarSQL.TablasSqlServer(BaseDatos.ConnectionString, "");
                 dataGrid1.DataSource = ds.Tables["table"];
                 dataGrid1.Refresh();
                 LBTablas.DataSource = ds.Tables["table"];
@@ -192,7 +192,7 @@ namespace GeneradorCodigoControladoras
             try
             {
                 DataSet ds = new DataSet("Tabla");
-                ds = ImportarSQL.TablasSqlServer(Error2.Text.ToString());
+                ds = ImportarSQL.TablasSqlServer(Error2.Text.ToString(),"");
                 for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
                 {
                     MessageBox.Show(ds.Tables[0].Columns[0].Table.Rows[i].ToString());
@@ -1143,7 +1143,7 @@ namespace GeneradorCodigoControladoras
             try
             {
                 DataSet ds = new DataSet("Tabla");
-                ds = ImportarSQL.TablasSqlServer(BaseDatos.ConnectionString);
+                ds = ImportarSQL.TablasSqlServer(BaseDatos.ConnectionString, "");
                 dataGrid1.DataSource = ds.Tables["table"];
                 dataGrid1.Refresh();
                 LBTablas.DataSource = ds.Tables["table"];

@@ -90,7 +90,7 @@ namespace GeneradorCodigoControladoras
             try
             {
                 DataSet ds = new DataSet("Tabla");
-                ds = ImportarSQL.TablasSqlServer(BaseDatos.ConnectionString);
+                ds = ImportarSQL.TablasSqlServer(BaseDatos.ConnectionString, "");
                 dataGrid1.DataSource = ds.Tables["table"];
                 dataGrid1.Refresh();
                 LBTablas.DataSource = ds.Tables["table"];
@@ -196,7 +196,7 @@ namespace GeneradorCodigoControladoras
             try
             {
                 DataSet ds = new DataSet("Tabla");
-                ds = ImportarSQL.TablasSqlServer(Error2.Text.ToString());
+                ds = ImportarSQL.TablasSqlServer(Error2.Text.ToString(), ParametroAcronimo);
                 for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
                 {
                     MessageBox.Show(ds.Tables[0].Columns[0].Table.Rows[i].ToString());
@@ -563,7 +563,7 @@ namespace GeneradorCodigoControladoras
             RTBCodigoGenerado.Text += "{" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$idusuario = is_null($f3->get('POST.idusuario')) ? 'T' : $f3->get('POST.idusuario');" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$llave = is_null($f3->get('POST.llave')) ? 'T' : $f3->get('POST.llave');" + Environment.NewLine;
-            RTBCodigoGenerado.Text += "if ($this->M_Usuariologueado->ValidaSession($idusuario, $llave)) {" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "if ($this->M_Usuariologueado->ValidaSession($idusuario, $llave,'sel" + NombreTabla+"')) {" + Environment.NewLine;
             //
             RTBCodigoGenerado.Text += "$pCampo0 = is_null($f3->get('POST.pCampo0')) ? 'T' : $f3->get('POST.pCampo0');" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$pValor0 = is_null($f3->get('POST.pValor0')) ? '' : $f3->get('POST.pValor0');" + Environment.NewLine;
@@ -581,7 +581,7 @@ namespace GeneradorCodigoControladoras
             RTBCodigoGenerado.Text += "$pValor6 = is_null($f3->get('POST.pValor6')) ? '' : $f3->get('POST.pValor6');" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$pCampo7 = is_null($f3->get('POST.pCampo7')) ? 'T' : $f3->get('POST.pCampo7');" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$pValor7 = is_null($f3->get('POST.pValor7')) ? '' : $f3->get('POST.pValor7');" + Environment.NewLine;
-            RTBCodigoGenerado.Text += "$oDav_Ctrol = new Dav_Ctrol();" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "$oDav_Ctrol = new _Dav_Ctrol();" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$Con = $oDav_Ctrol->fnDevuelveConsulta('vis" + NombreTablaSQL.ToLower() + "' , $pCampo0  , $pValor0  , $pCampo1  , $pValor1  , $pCampo2  , $pValor2  , $pCampo3  , $pValor3  , $pCampo4  , $pValor4  , $pCampo5  , $pValor5  , $pCampo6  , $pValor6  , $pCampo7  , $pValor7 );" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$sql = $Con;" + Environment.NewLine;
 
@@ -632,7 +632,7 @@ namespace GeneradorCodigoControladoras
             RTBCodigoGenerado.Text += "public function add" + NombreTabla + "($f3)" + Environment.NewLine;
             RTBCodigoGenerado.Text += "{" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$idusuario = is_null($f3->get('POST.idusuario')) ? 'T' : $f3->get('POST.idusuario');" + Environment.NewLine;
-            RTBCodigoGenerado.Text += "$llave = is_null($f3->get('POST.llave')) ? 'T' : $f3->get('POST.llave');" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "if ($this->M_Usuariologueado->ValidaSession($idusuario, $llave,'add" + NombreTabla + "')) {" + Environment.NewLine;
             RTBCodigoGenerado.Text += "if ($this->M_Usuariologueado->ValidaSession($idusuario, $llave)) {" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$Tipo = 'C';" + Environment.NewLine;
             for (int i = 0; i <= this.ImportarSQL.ColumnasI.Count - 1; i++)
@@ -691,7 +691,7 @@ namespace GeneradorCodigoControladoras
             RTBCodigoGenerado.Text += "{" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$idusuario = is_null($f3->get('POST.idusuario')) ? 'T' : $f3->get('POST.idusuario');" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$llave = is_null($f3->get('POST.llave')) ? 'T' : $f3->get('POST.llave');" + Environment.NewLine;
-            RTBCodigoGenerado.Text += "if ($this->M_Usuariologueado->ValidaSession($idusuario, $llave)) {" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "if ($this->M_Usuariologueado->ValidaSession($idusuario, $llave,'get" + NombreTabla + "')) {" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$Tipo = 'R';" + Environment.NewLine;
             for (int i = 0; i <= this.ImportarSQL.ColumnasI.Count - 1; i++)
             {
@@ -749,7 +749,7 @@ namespace GeneradorCodigoControladoras
             RTBCodigoGenerado.Text += "{" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$idusuario = is_null($f3->get('POST.idusuario')) ? 'T' : $f3->get('POST.idusuario');" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$llave = is_null($f3->get('POST.llave')) ? 'T' : $f3->get('POST.llave');" + Environment.NewLine;
-            RTBCodigoGenerado.Text += "if ($this->M_Usuariologueado->ValidaSession($idusuario, $llave)) {" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "if ($this->M_Usuariologueado->ValidaSession($idusuario, $llave,'upd" + NombreTabla + "')) {" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$Tipo = 'U';" + Environment.NewLine;
             for (int i = 0; i <= this.ImportarSQL.ColumnasI.Count - 1; i++)
             {
@@ -807,7 +807,7 @@ namespace GeneradorCodigoControladoras
             RTBCodigoGenerado.Text += "{" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$idusuario = is_null($f3->get('POST.idusuario')) ? 'T' : $f3->get('POST.idusuario');" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$llave = is_null($f3->get('POST.llave')) ? 'T' : $f3->get('POST.llave');" + Environment.NewLine;
-            RTBCodigoGenerado.Text += "if ($this->M_Usuariologueado->ValidaSession($idusuario, $llave)) {" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "if ($this->M_Usuariologueado->ValidaSession($idusuario, $llave,'pap" + NombreTabla + "')) {" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$Tipo = is_null($f3->get('POST.tipo')) ? 'T' : $f3->get('POST.tipo');" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$procedure = is_null($f3->get('POST.procedure')) ? 'T' : $f3->get('POST.procedure');" + Environment.NewLine;
             for (int i = 0; i <= this.ImportarSQL.ColumnasI.Count - 1; i++)
@@ -1137,12 +1137,12 @@ namespace GeneradorCodigoControladoras
                 MessageBox.Show("No se encontro la ruta para guardar este archivo");
             }
         }
-        public string ParametroAcronimo = "unicl";
+        public string ParametroAcronimo = "seg_tbl";
         private void acronimoretorna(ref string NombreTabla,string NombreTablaOrigen)
         {
             //LBTablas.SelectedValue.ToString().Substring(0, 3)
-            if (NombreTablaOrigen.Substring(0, 5) == ParametroAcronimo)
-                NombreTabla = NombreTablaOrigen.Substring(5);
+            if (NombreTablaOrigen.Substring(0, 7) == ParametroAcronimo)
+                NombreTabla = NombreTablaOrigen.Substring(7);
             else
                 NombreTabla = NombreTablaOrigen.Substring(6);
         }
@@ -1161,7 +1161,7 @@ namespace GeneradorCodigoControladoras
             try
             {
                 DataSet ds = new DataSet("Tabla");
-                ds = ImportarSQL.TablasMySqlServer(BaseDatos.ConnectionString, TXTWebservices.Text);
+                ds = ImportarSQL.TablasMySqlServer(BaseDatos.ConnectionString, TXTWebservices.Text,ParametroAcronimo);
                 dataGrid1.DataSource = ds.Tables["table"];
                 dataGrid1.Refresh();
                 LBTablas.DataSource = ds.Tables["table"];

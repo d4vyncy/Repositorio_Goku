@@ -29,14 +29,14 @@ namespace GeneradorCodigoControladoras.Entidades
         }
 
 
-        public DataSet TablasSqlServer(string CadenaConexion)
+        public DataSet TablasSqlServer(string CadenaConexion, string ParametroAcronimo)
         {
             //toma todas las tablas de una base de datos de SQLserver
             SqlConnection MiConexion = new SqlConnection(CadenaConexion);
             string Sql = "SELECT " + '\n' +
                 "TABLE_SCHEMA, TABLE_NAME FROM INFORMATION_SCHEMA.TABLES " + '\n' +
                 "WHERE " + '\n' +
-                "TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME<>'dtproperties' AND TABLE_NAME<>'sysdiagrams' and TABLE_NAME like 'uni%' " + '\n';
+                "TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME<>'dtproperties' AND TABLE_NAME<>'sysdiagrams' and TABLE_NAME like '"+ ParametroAcronimo + "%' " + '\n';
             //Condicion --solo para la bd valorados
             //Sql += "and TABLE_NAME in ('trnIngreso','trnSalida','trnbaja','trndevolucion','trnfaltante','trnfallaimprenta','trnfallaimpresion','trndescargo','trnrequerimiento')";
             //Sql += " and TABLE_NAME<>'trnAperturaCierreCaja' and TABLE_NAME<>'trnTarjetaParaControlDeExistencias'"; // and TABLE_NAME<>'trnUsuarioEntidadOD'";
@@ -50,8 +50,8 @@ namespace GeneradorCodigoControladoras.Entidades
             MiConexion.Close();
             return ds;
         }
-        string ParametroAcronimo = "uni";
-        public DataSet TablasMySqlServer(string CadenaConexion,string baseDatos)
+        //string ParametroAcronimo = "seg_tbl";
+        public DataSet TablasMySqlServer(string CadenaConexion,string baseDatos,string ParametroAcronimo)
         {
             //toma todas las tablas de una base de datos de SQLserver
             MySqlConnection MiConexion = new MySqlConnection(CadenaConexion);

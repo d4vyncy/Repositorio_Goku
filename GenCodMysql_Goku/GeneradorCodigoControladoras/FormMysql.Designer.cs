@@ -332,7 +332,7 @@
             this.TXTSever.Name = "TXTSever";
             this.TXTSever.Size = new System.Drawing.Size(184, 20);
             this.TXTSever.TabIndex = 15;
-            this.TXTSever.Text = "synerdyne.net";
+            this.TXTSever.Text = "195.35.38.67";
             // 
             // label18
             // 
@@ -359,7 +359,7 @@
             this.TXTPass.PasswordChar = '*';
             this.TXTPass.Size = new System.Drawing.Size(184, 20);
             this.TXTPass.TabIndex = 17;
-            this.TXTPass.Text = "Amsterdam123$";
+            this.TXTPass.Text = "Ls:uh|vbj2=";
             // 
             // label16
             // 
@@ -383,7 +383,7 @@
             this.TXTUser.Name = "TXTUser";
             this.TXTUser.Size = new System.Drawing.Size(184, 20);
             this.TXTUser.TabIndex = 16;
-            this.TXTUser.Text = "synerd7_Amsterdam";
+            this.TXTUser.Text = "u765344825_davidserrudo09";
             // 
             // TXTWebservices
             // 
@@ -391,7 +391,7 @@
             this.TXTWebservices.Name = "TXTWebservices";
             this.TXTWebservices.Size = new System.Drawing.Size(115, 20);
             this.TXTWebservices.TabIndex = 36;
-            this.TXTWebservices.Text = "synerd7_Amsterdam";
+            this.TXTWebservices.Text = "u765344825_sistema";
             // 
             // label6
             // 
