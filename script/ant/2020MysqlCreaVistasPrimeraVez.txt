@@ -1,0 +1,90 @@
+--CREACION DE VISTAS
+declare @var_id as int 
+declare @var_name as varchar (500)
+declare @var_name_campo as varchar (500)
+declare @var_long as varchar (500)
+declare @var_AUX as varchar (500)
+declare @var_cadena as varchar (8000)
+declare @var_cadena_i as varchar (8000)
+declare @var_cadena_pe as varchar (8000)
+declare @var_cadena_pe2 as varchar (8000)
+declare @var_cadena_pe2_i as varchar (8000)
+declare @var_cadena_pe2_d as varchar (8000)
+declare @var_cadena_pe3 as varchar (8000)
+declare @var_cadena_pe3_i as varchar (8000)
+declare @var_cadena_Inicio as varchar (8000)
+declare @var_name_xtype as varchar (500)
+declare @var_length as int
+declare @var_contador as int
+declare @cadena_respuesta varchar (500)
+DECLARE tablas_Cursor CURSOR FOR
+SELECT name, id FROM sysobjects where xtype= 'U' and name <> 'dtproperties' AND NAME <> 'sysdiagrams' and name not like 'TEMPORAL%' AND NAME != 'resultados' 
+order by name--solo por lo de la base venecia
+OPEN tablas_Cursor
+FETCH NEXT FROM tablas_Cursor into @var_name, @var_id
+
+WHILE @@FETCH_STATUS = 0
+BEGIN
+	if not EXISTS(SELECT name FROM sysobjects WHERE name = 'v' + substring(@var_name, 3, len(@var_name)) AND type = 'v') and not EXISTS(SELECT name FROM sysobjects WHERE name = 'v' + substring(@var_name, 4, len(@var_name)) AND type = 'v')
+	begin
+		if substring(@var_name, 1, 2) ='cl'
+		begin
+			print 'DROP VIEW IF EXISTS vis' + substring(@var_name, 3, len(@var_name)) + ';'
+			print 'CREATE VIEW vis' + substring(@var_name, 3, len(@var_name))
+		end
+		else
+		begin
+			print 'DROP VIEW IF EXISTS vis' + substring(@var_name, 4, len(@var_name)) + ';'
+			print 'CREATE VIEW vis' + substring(@var_name, 4, len(@var_name))
+		end
+		set @var_cadena = ''
+		set @var_cadena_i = ''
+		set @var_cadena_pe = ''
+		set @var_cadena_pe2 = ''
+		set @var_cadena_pe2_i = ''
+		set @var_cadena_pe3_i = ''
+		set @var_cadena_pe3 = ''
+		set @var_contador = 1
+		set @var_cadena_Inicio =''
+		
+		DECLARE campos_Cursor CURSOR FOR
+		SELECT a.name, b.name, a.length from syscolumns a, systypes b where a.xtype = b.xtype and a.id = @var_id  and b.name<>'sysname' and a.name<>'FechaRegistro' and a.name<>'EstadoRegistro' order by a.colid
+		OPEN campos_Cursor
+		FETCH NEXT FROM campos_Cursor into @var_name_campo, @var_name_xtype, @var_length
+		WHILE @@FETCH_STATUS = 0
+		BEGIN
+			set @var_long = ''
+			set @var_length=@var_length
+			IF(@var_name_xtype = 'varchar')
+			begin
+				set @var_long = '('+cast(@var_length as varchar(500))+')'
+			end
+			IF(@var_name_xtype = 'nvarchar')
+			begin
+				set @var_long = '('+cast(@var_length as varchar(500))+')'
+			end
+			IF(@var_name_xtype = 'char')
+			begin
+				set @var_long = '('+cast(@var_length as varchar(500))+')'
+			end
+			SET @VAR_AUX = ' = NULL'
+			
+				set @var_cadena_pe = @var_cadena_pe +', '+ '@p' + @var_name_campo +' as '+ @var_name_xtype + @var_long  --+ @var_aux)   -- declara parametros
+				set @var_cadena_pe = @var_cadena_pe+' = null'			
+				set @var_cadena = @var_cadena + @var_name_campo + ', ' 
+				set @var_cadena_pe2_i= @var_cadena_pe2_i + '@p' + @var_name_campo +', '
+			set @var_Contador = @var_contador +1
+			FETCH NEXT FROM campos_Cursor into @var_name_campo, @var_name_xtype, @var_length
+		END
+		CLOSE campos_Cursor
+		DEALLOCATE campos_Cursor
+	   print  'AS'
+	   print 'SELECT ' + substring(@var_cadena, 1, len(@var_cadena)-1) 
+	   print 'FROM '  +@var_name  + ' where estadoregistro=1;'  
+		print  ''
+	end
+   FETCH NEXT FROM tablas_Cursor into @var_name, @var_id
+END
+CLOSE tablas_Cursor
+DEALLOCATE tablas_Cursor
+GO

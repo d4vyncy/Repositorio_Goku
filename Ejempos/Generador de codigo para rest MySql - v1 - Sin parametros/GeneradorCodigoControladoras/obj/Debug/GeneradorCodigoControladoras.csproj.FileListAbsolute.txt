@@ -1,0 +1,115 @@
+C:\Users\D4V3\Google Drive\TED\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.exe.config
+C:\Users\D4V3\Google Drive\TED\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.csprojResolveAssemblyReference.cache
+C:\Users\D4V3\Google Drive\TED\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.Form1.resources
+C:\Users\D4V3\Google Drive\TED\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.Properties.Resources.resources
+C:\Users\D4V3\Google Drive\TED\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.csproj.GenerateResource.Cache
+C:\Users\D4V3\Google Drive\TED\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.exe
+C:\Users\D4V3\Google Drive\TED\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.pdb
+C:\Users\D4V3\Google Drive\TED\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\bin\Debug\mscorlib.dll
+C:\Users\D4V3\Google Drive\TED\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\bin\Debug\es\mscorlib.resources.dll
+C:\Users\D4V3\Google Drive\TED\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\bin\Debug\normidna.nlp
+C:\Users\D4V3\Google Drive\TED\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\bin\Debug\normnfc.nlp
+C:\Users\D4V3\Google Drive\TED\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\bin\Debug\normnfd.nlp
+C:\Users\D4V3\Google Drive\TED\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\bin\Debug\normnfkc.nlp
+C:\Users\D4V3\Google Drive\TED\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\bin\Debug\normnfkd.nlp
+C:\Users\D4V3\Google Drive\TED\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.exe
+C:\Users\D4V3\Google Drive\TED\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.pdb
+C:\Users\desarrollo01\Google Drive\TED\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.exe.config
+C:\Users\desarrollo01\Google Drive\TED\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.exe
+C:\Users\desarrollo01\Google Drive\TED\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.pdb
+C:\Users\desarrollo01\Google Drive\TED\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.exe
+C:\Users\desarrollo01\Google Drive\TED\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.pdb
+C:\Users\desarrollo01\Google Drive\TED\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\desarrollo01\Google Drive\TED\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.Form1.resources
+C:\Users\desarrollo01\Google Drive\TED\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.Properties.Resources.resources
+C:\Users\desarrollo01\Google Drive\TED\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\desarrollo01\Google Drive\TED\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\obj\Debug\GenerateResource.write.1.tlog
+H:\_Proyectos2017\Sistema0\Generadores\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.exe.config
+H:\_Proyectos2017\Sistema0\Generadores\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.exe
+H:\_Proyectos2017\Sistema0\Generadores\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.pdb
+H:\_Proyectos2017\Sistema0\Generadores\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.exe
+H:\_Proyectos2017\Sistema0\Generadores\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.pdb
+H:\_Proyectos2017\Sistema0\Generadores\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.csprojResolveAssemblyReference.cache
+H:\_Proyectos2017\Sistema0\Generadores\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.Form1.resources
+H:\_Proyectos2017\Sistema0\Generadores\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.Properties.Resources.resources
+H:\_Proyectos2017\Sistema0\Generadores\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.csproj.GenerateResource.Cache
+G:\_Proyectos2017\Sistema0\Generadores\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.exe.config
+G:\_Proyectos2017\Sistema0\Generadores\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.exe
+G:\_Proyectos2017\Sistema0\Generadores\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.pdb
+C:\d4v\_Proyectos2017\Sistema0\Generadores\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.exe.config
+C:\d4v\_Proyectos2017\Sistema0\Generadores\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.exe
+C:\d4v\_Proyectos2017\Sistema0\Generadores\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.pdb
+C:\d4v\_Proyectos2017\Sistema0\Generadores\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.exe
+C:\d4v\_Proyectos2017\Sistema0\Generadores\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.pdb
+C:\d4v\_Proyectos2017\Sistema0\Generadores\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.Form1.resources
+C:\d4v\_Proyectos2017\Sistema0\Generadores\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.Properties.Resources.resources
+C:\d4v\_Proyectos2017\Sistema0\Generadores\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.csproj.GenerateResource.Cache
+C:\d4v\_Proyectos2018\Generadores\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.exe.config
+C:\d4v\_Proyectos2018\Generadores\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.exe
+C:\d4v\_Proyectos2018\Generadores\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.pdb
+C:\d4v\_Proyectos2018\Generadores\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.exe
+C:\d4v\_Proyectos2018\Generadores\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.pdb
+C:\d4v\_Proyectos2018\Generadores\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.Form1.resources
+C:\d4v\_Proyectos2018\Generadores\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.Properties.Resources.resources
+C:\d4v\_Proyectos2018\Generadores\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.csproj.GenerateResource.Cache
+C:\d4v\_Proyectos2018\Generadores\generadorOEP_archivo\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.csprojResolveAssemblyReference.cache
+D:\2020\Generadores\generador2020\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.exe.config
+D:\2020\Generadores\generador2020\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.exe
+D:\2020\Generadores\generador2020\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.pdb
+D:\2020\Generadores\generador2020\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.csprojAssemblyReference.cache
+D:\2020\Generadores\generador2020\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.Form1.resources
+D:\2020\Generadores\generador2020\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.Properties.Resources.resources
+D:\2020\Generadores\generador2020\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.csproj.GenerateResource.cache
+D:\2020\Generadores\generador2020\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.csproj.CoreCompileInputs.cache
+D:\2020\Generadores\generador2020\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.exe
+D:\2020\Generadores\generador2020\WCFCodigoDirectoAplicacion - Con 8 parametros\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.pdb
+D:\2020\Generadores\generador2020\davidserrudo - GeneraCodigoDirectoALaBD -2020.1\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.exe.config
+D:\2020\Generadores\generador2020\davidserrudo - GeneraCodigoDirectoALaBD -2020.1\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.exe
+D:\2020\Generadores\generador2020\davidserrudo - GeneraCodigoDirectoALaBD -2020.1\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.pdb
+D:\2020\Generadores\generador2020\davidserrudo - GeneraCodigoDirectoALaBD -2020.1\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.csprojAssemblyReference.cache
+D:\2020\Generadores\generador2020\davidserrudo - GeneraCodigoDirectoALaBD -2020.1\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.Form1.resources
+D:\2020\Generadores\generador2020\davidserrudo - GeneraCodigoDirectoALaBD -2020.1\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.Properties.Resources.resources
+D:\2020\Generadores\generador2020\davidserrudo - GeneraCodigoDirectoALaBD -2020.1\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.csproj.GenerateResource.cache
+D:\2020\Generadores\generador2020\davidserrudo - GeneraCodigoDirectoALaBD -2020.1\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.csproj.CoreCompileInputs.cache
+D:\2020\Generadores\generador2020\davidserrudo - GeneraCodigoDirectoALaBD -2020.1\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.exe
+D:\2020\Generadores\generador2020\davidserrudo - GeneraCodigoDirectoALaBD -2020.1\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.pdb
+E:\Generador2020\davidserrudo - GeneraCodigoDirectoALaBD -2020.1\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.exe.config
+E:\Generador2020\davidserrudo - GeneraCodigoDirectoALaBD -2020.1\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.exe
+E:\Generador2020\davidserrudo - GeneraCodigoDirectoALaBD -2020.1\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.pdb
+E:\Generador2020\davidserrudo - GeneraCodigoDirectoALaBD -2020.1\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.csprojAssemblyReference.cache
+E:\Generador2020\davidserrudo - GeneraCodigoDirectoALaBD -2020.1\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.Form1.resources
+E:\Generador2020\davidserrudo - GeneraCodigoDirectoALaBD -2020.1\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.Properties.Resources.resources
+E:\Generador2020\davidserrudo - GeneraCodigoDirectoALaBD -2020.1\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.csproj.GenerateResource.cache
+E:\Generador2020\davidserrudo - GeneraCodigoDirectoALaBD -2020.1\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.csproj.CoreCompileInputs.cache
+E:\Generador2020\davidserrudo - GeneraCodigoDirectoALaBD -2020.1\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.exe
+E:\Generador2020\davidserrudo - GeneraCodigoDirectoALaBD -2020.1\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.pdb
+C:\generador\Generador\davidserrudo - GeneraCodigoDirectoALaBD -2020.1\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.exe.config
+C:\generador\Generador\davidserrudo - GeneraCodigoDirectoALaBD -2020.1\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.exe
+C:\generador\Generador\davidserrudo - GeneraCodigoDirectoALaBD -2020.1\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.pdb
+C:\generador\Generador\davidserrudo - GeneraCodigoDirectoALaBD -2020.1\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.csprojAssemblyReference.cache
+C:\generador\Generador\davidserrudo - GeneraCodigoDirectoALaBD -2020.1\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.Form1.resources
+C:\generador\Generador\davidserrudo - GeneraCodigoDirectoALaBD -2020.1\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.Properties.Resources.resources
+C:\generador\Generador\davidserrudo - GeneraCodigoDirectoALaBD -2020.1\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.csproj.GenerateResource.cache
+C:\generador\Generador\davidserrudo - GeneraCodigoDirectoALaBD -2020.1\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.csproj.CoreCompileInputs.cache
+C:\generador\Generador\davidserrudo - GeneraCodigoDirectoALaBD -2020.1\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.exe
+C:\generador\Generador\davidserrudo - GeneraCodigoDirectoALaBD -2020.1\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.pdb
+C:\Generador\davidserrudo - GeneraCodigoDirectoALaBD -2020.1\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.exe.config
+C:\Generador\davidserrudo - GeneraCodigoDirectoALaBD -2020.1\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.exe
+C:\Generador\davidserrudo - GeneraCodigoDirectoALaBD -2020.1\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.pdb
+C:\Generador\davidserrudo - GeneraCodigoDirectoALaBD -2020.1\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.csprojAssemblyReference.cache
+C:\Generador\davidserrudo - GeneraCodigoDirectoALaBD -2020.1\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.Form1.resources
+C:\Generador\davidserrudo - GeneraCodigoDirectoALaBD -2020.1\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.Properties.Resources.resources
+C:\Generador\davidserrudo - GeneraCodigoDirectoALaBD -2020.1\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.csproj.GenerateResource.cache
+C:\Generador\davidserrudo - GeneraCodigoDirectoALaBD -2020.1\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.csproj.CoreCompileInputs.cache
+C:\Generador\davidserrudo - GeneraCodigoDirectoALaBD -2020.1\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.exe
+C:\Generador\davidserrudo - GeneraCodigoDirectoALaBD -2020.1\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.pdb
+C:\generadorMysql\Generador de codigo para rest MySql\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.exe.config
+C:\generadorMysql\Generador de codigo para rest MySql\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.exe
+C:\generadorMysql\Generador de codigo para rest MySql\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.pdb
+C:\generadorMysql\Generador de codigo para rest MySql\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.csprojAssemblyReference.cache
+C:\generadorMysql\Generador de codigo para rest MySql\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.Form1.resources
+C:\generadorMysql\Generador de codigo para rest MySql\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.Properties.Resources.resources
+C:\generadorMysql\Generador de codigo para rest MySql\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.csproj.GenerateResource.cache
+C:\generadorMysql\Generador de codigo para rest MySql\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.csproj.CoreCompileInputs.cache
+C:\generadorMysql\Generador de codigo para rest MySql\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.exe
+C:\generadorMysql\Generador de codigo para rest MySql\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.pdb

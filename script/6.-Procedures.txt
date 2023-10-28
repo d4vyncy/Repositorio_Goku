@@ -1,0 +1,12 @@
+DELIMITER $$
+CREATE PROCEDURE pcontrolsesion
+(IN pTipo VARCHAR(1), IN pidusuariologueado INT, IN pidusuario INT, IN pidrolusuario INT, IN pllave VARCHAR(300), IN pidestadollave INT, IN pfecha DATETIME, IN pdireccionip VARCHAR(25), IN pdireccionhost VARCHAR(25), IN pdirecciondest VARCHAR(250))
+begin
+	IF pTipo='C' then  
+	UPDATE  segtrnusuariologueado SET idestadollave=2 WHERE idusuario=pidusuario AND idestadollave=1;
+	SET pidusuariologueado = (SELECT  (IFNULL(MAX(idusuariologueado) + 1,1)) FROM segtrnusuariologueado);
+	INSERT INTO segtrnusuariologueado(idusuariologueado, idusuario, idrolusuario, llave, idestadollave, fecha, direccionip, direccionhost, direcciondest,fecharegistro,estadoregistro)	values (pidusuariologueado, pidusuario, pidrolusuario, pllave, pidestadollave, pfecha, pdireccionip, pdireccionhost, pdirecciondest,NOW(),1);
+	SELECT pidusuariologueado AS idusuariologueado;
+	END IF;
+	END
+DELIMITER $$

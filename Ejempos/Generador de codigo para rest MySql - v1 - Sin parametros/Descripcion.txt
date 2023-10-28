@@ -1,0 +1,15 @@
+6112008
+
+
+crea DTO en blanco pero falta copiar
+
+
+modificar este codigo
+para q copie
+
+            File.Copy(Application.StartupPath + @"\DDL\Microsoft.ApplicationBlocks.Data.dll", directorio + @"\Bin\Microsoft.ApplicationBlocks.Data.dll");
+            directorio = directorio + @"\App_Code";
+            Directory.CreateDirectory(directorio);
+            Directory.CreateDirectory(directorio + @"\Reutilizables");
+            Directory.CreateDirectory(directorio + @"\Entidades");
+            Directory.CreateDirectory(directorio + @"\Controladoras");

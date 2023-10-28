@@ -1,0 +1,39 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `pavciudad`(
+	IN `pCampo0` varchar(150),
+	IN `pValor0` varchar(150),
+	IN `pCampo1` varchar(150),
+	IN `pValor1` varchar(150),
+	IN `pCampo2` varchar(150),
+	IN `pValor2` varchar(150),
+	IN `pCampo3` varchar(150),
+	IN `pValor3` varchar(150),
+	IN `pCampo4` varchar(150),
+	IN `pValor4` varchar(150),
+	IN `pCampo5` varchar(150),
+	IN `pValor5` varchar(150),
+	IN `pCampo6` varchar(150),
+	IN `pValor6` varchar(150),
+	IN `pCampo7` varchar(150),
+	IN `pValor7` varchar(150)
+)
+LANGUAGE SQL
+NOT DETERMINISTIC
+CONTAINS SQL
+SQL SECURITY DEFINER
+COMMENT ''
+BEGIN
+DECLARE ps VARCHAR(750);
+SET pS = fnDevuelveCondicion(pCampo0,pValor0);
+
+		SET pS = CONCAT(pS , fnDevuelveCondicion(pCampo1,CONCAT('.' , pValor1)));
+		SET pS = CONCAT(pS , fnDevuelveCondicion(pCampo2,CONCAT('.' , pValor2)));
+		SET pS = CONCAT(pS , fnDevuelveCondicion(pCampo3,CONCAT('.' , pValor3)));
+		SET pS = CONCAT(pS , fnDevuelveCondicion(pCampo4,CONCAT('.' , pValor4)));
+		SET pS = CONCAT(pS , fnDevuelveCondicion(pCampo5,CONCAT('.' , pValor5)));
+		SET pS = CONCAT(pS , fnDevuelveCondicion(pCampo6,CONCAT('.' , pValor6)));
+		SET pS = CONCAT(pS , fnDevuelveCondicion(pCampo7,CONCAT('.' , pValor7)));
+set pS =CONCAT('SELECT  * from  clciudad' , pS);
+PREPARE stmt FROM pS;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;
+END

@@ -1,0 +1,90 @@
+Para guardar un texto en un fichero podemos utilizar la instrucción FileOpen
+
+FileOpen(1, NombreFichero, OpenMode.Output)
+Write(1, VariableDeTexto)
+FileClose(1)
+ 
+Dim Proceso As New Process()
+Proceso.StartInfo.FileName = "calc.exe"
+Proceso.StartInfo.Arguments = ""
+Proceso.Start()
+ 
+void __fastcall TForm1::Button1Click(TObject *Sender)
+{
+  if (!DirectoryExists("c:\\temp"))
+  {
+    if (!CreateDir("C:\\temp"))
+      throw Exception("Cannot create c:\\temp directory.");
+  }
+}
+ 
+//crear carpetas usando c#
+try
+{
+string path = @"c:\" + this.t1.Text;
+Directory.CreateDirectory( path );
+
+MessageBox.Show( @"C:\" + this.t1.Text,"Directorio creado en :");
+
+}
+catch
+{
+MessageBox.Show("Caracteres No Válidos");
+}
+
+
+Cómo: Guardar un archivo en una carpeta
+Puede utilizar el componente SaveFileDialog integrado para permitir a los usuarios guardar un archivo en una carpeta. Para mostrar un cuadro de diálogo, se usa el método ShowDialog. Después, puede comprobar si el usuario ha hecho clic en el botón Aceptar utilizando el campo DialogResult..::.OK.
+
+Para mostrar el cuadro de diálogo del explorador de carpetas
+En el menú Archivo, haga clic en Nuevo proyecto.
+Aparecerá el cuadro de diálogo Nuevo proyecto.
+
+Haga clic en Aplicación de Windows Forms y, a continuación, en Aceptar.
+
+Agregue un control RichTextBox al formulario, dejando el nombre predeterminado, RichTextBox1.
+
+Agregue un control Button al formulario y cambie las propiedades siguientes en la ventana Propiedades:
+
+Propiedad
+ Valor
+ 
+Name 
+ guardarArchivoTexto 
+ 
+Text 
+ Guardar como 
+ 
+
+Agregue un componente SaveFileDialog al formulario.
+saveFileDialog1 aparecerá en la bandeja de componentes.
+
+Haga doble clic en el botón para agregar el controlador de eventos predeterminado en el Editor de código.
+
+En el controlador del evento saveTextFile_Click, agregue el código siguiente para mostrar el cuadro de diálogo Guardar como. Este código guarda el texto escrito en el control RichTextBox en un archivo de texto en la ubicación especificada.
+
+C#
+ Copiar código
+saveFileDialog1.Filter = "txt files (*.txt)|*.txt";
+
+if(saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK
+    && saveFileDialog1.FileName.Length > 0) 
+{
+
+    richTextBox1.SaveFile(saveFileDialog1.FileName, 
+        RichTextBoxStreamType.PlainText);
+}
+
+Presione F5 para ejecutar el código.
+
+Cuando aparezca el formulario, escriba algún texto en el cuadro de texto enriquecido.
+
+Haga clic en Guardar como y, a continuación, vaya a una carpeta donde desee guardar el archivo de texto.
+
+Especifique un nombre para el archivo de texto y haga clic en Aceptar.
+
+Compruebe que el archivo de texto existe en la ubicación especificada.
+
+Cierre la aplicación.
+
+

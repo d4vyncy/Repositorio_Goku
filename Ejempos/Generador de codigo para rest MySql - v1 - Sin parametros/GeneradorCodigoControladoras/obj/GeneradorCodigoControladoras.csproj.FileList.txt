@@ -1,0 +1,8 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\GeneradorCodigoControladoras.Form1.resources
+obj\Debug\GeneradorCodigoControladoras.Properties.Resources.resources
+obj\Debug\GeneradorCodigoControladoras.csproj.GenerateResource.Cache
+bin\Debug\GeneradorCodigoControladoras.exe
+bin\Debug\GeneradorCodigoControladoras.pdb
+obj\Debug\GeneradorCodigoControladoras.exe
+obj\Debug\GeneradorCodigoControladoras.pdb

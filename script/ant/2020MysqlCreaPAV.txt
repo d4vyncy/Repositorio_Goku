@@ -1,0 +1,117 @@
+
+
+
+-----crea pav mysql 25102020 0026
+declare @var_id as int 
+declare @var_name as varchar (50)
+declare @var_name_campo as varchar (50)
+declare @var_long as varchar (50)
+declare @var_AUX as varchar (50)
+declare @var_cadena as varchar (8000)
+declare @var_cadena_i as varchar (8000)
+declare @var_cadena_pe as varchar (8000)
+declare @var_cadena_pe2 as varchar (8000)
+declare @var_cadena_pe2_i as varchar (8000)
+declare @var_cadena_pe2_d as varchar (8000)
+declare @var_cadena_pe3 as varchar (8000)
+declare @var_cadena_pe3_i as varchar (8000)
+declare @var_name_xtype as varchar (50)
+declare @var_length as int
+declare @var_contador as int
+
+DECLARE tablas_Cursor CURSOR FOR
+SELECT name, id FROM sysobjects where xtype= 'u' and name <> 'dtproperties' AND NAME <> 'sysdiagrams' and name not like 'TEMPORAL%' 
+AND NAME != 'resultados' 
+--AND NAME like 'vis%' 
+order by name--solo por lo de la base venecia
+OPEN tablas_Cursor
+FETCH NEXT FROM tablas_Cursor into @var_name, @var_id
+
+WHILE @@FETCH_STATUS = 0
+BEGIN 
+		if substring(@var_name, 1, 2) ='cl'
+		begin
+		print 'DROP PROCEDURE IF EXISTS pvi' + substring(@var_name, 3, len(@var_name)) + ';'
+			print ''
+			print 'DELIMITER $$'
+			 print 'CREATE PROCEDURE pvi' + substring(@var_name, 3, len(@var_name)) 
+		end
+		else
+		begin
+		print 'DROP PROCEDURE IF EXISTS pvi' + substring(@var_name, 4, len(@var_name)) + ';'
+			print ''
+			print 'DELIMITER $$'
+			 print 'CREATE PROCEDURE pvi' + substring(@var_name, 4, len(@var_name)) 
+		end
+	set @var_cadena = ''
+	set @var_cadena_i = ''
+	set @var_cadena_pe = ''
+	set @var_cadena_pe2 = ''
+	set @var_cadena_pe2_i = ''
+	set @var_cadena_pe3_i = ''
+	set @var_cadena_pe3 = ''
+	set @var_contador = 1
+	DECLARE campos_Cursor CURSOR FOR
+	--SELECT a.name, b.name, a.length from syscolumns a, systypes b where a.xtype = b.xtype and id = @var_id  and (a.name not in ('FechaRegistro','FilaEstado'))
+	SELECT a.name, b.name, a.length from syscolumns a, systypes b where a.xtype = b.xtype and a.id = @var_id  and b.name<>'sysname' order by a.colid
+	OPEN campos_Cursor
+	FETCH NEXT FROM campos_Cursor into @var_name_campo, @var_name_xtype, @var_length
+	WHILE @@FETCH_STATUS = 0
+	BEGIN
+		set @var_long = ''
+		 IF(@var_name_xtype = 'varchar')
+		begin
+			set @var_long = '('+cast(@var_length as varchar(50))+')'
+		end
+		IF(@var_name_xtype = 'nvarchar')
+		begin
+			set @var_long = '('+cast(@var_length as varchar(50))+')'
+		end
+		
+		SET @VAR_AUX = ' = NULL'
+		set @var_cadena_pe =  @var_cadena_pe + '@pe_' + @var_name_campo + ' as ' + @var_name_xtype+ @var_long + @var_aux+ ', '  -- declara parametros
+			set @var_cadena_pe3 = ' where ' + @var_name_campo + '=' + '@pe_' + @var_name_campo --usa el primer campo para actualizar o borrar
+			set @var_Contador = @var_contador +1		
+			
+			set @var_cadena = @var_cadena + '[' + @var_name_campo + '], ' -- inserta
+			set @var_cadena_pe2_i =  @var_cadena_pe2_i + '@pe_' + @var_name_campo + ', '  --inserta			
+			set @var_cadena_pe2 = @var_cadena_pe2 + @var_name_campo + '=' + '@pe_' + @var_name_campo + ', ' -- actualiza
+		FETCH NEXT FROM campos_Cursor into @var_name_campo, @var_name_xtype, @var_length
+	END
+	CLOSE campos_Cursor
+	DEALLOCATE campos_Cursor
+   print  '(in pCampo0 varchar(150) ,in pValor0 varchar(150) ,in pCampo1 varchar(150) ,in pValor1 varchar(150),in pCampo2 varchar(150),in pValor2 varchar(150) ,in pCampo3 varchar(150) ,in pValor3 varchar(150) ,'
+   print  'in pCampo4 varchar(150) ,in pValor4 varchar(150) ,in pCampo5 varchar(150) ,in pValor5 varchar(150),in pCampo6 varchar(150),in pValor6 varchar(150) ,in pCampo7 varchar(150) ,in pValor7 varchar(150) )'
+   --print  'WITH ENCRYPTION'
+   print  'BEGIN'   
+   print  'DECLARE ps VARCHAR(750);'
+   print  'SET pS = fnDevuelveCondicion(pCampo0,pValor0);'   
+   print  '		SET pS = CONCAT(pS , fnDevuelveCondicion(pCampo1,CONCAT(' + '''' + '.' + ''''  + ' , pValor1)));'
+   print  '		SET pS = CONCAT(pS , fnDevuelveCondicion(pCampo2,CONCAT(' + '''' + '.' + ''''  + ' , pValor2)));'
+   print  '		SET pS = CONCAT(pS , fnDevuelveCondicion(pCampo3,CONCAT(' + '''' + '.' + ''''  + ' , pValor3)));'
+   print  '		SET pS = CONCAT(pS , fnDevuelveCondicion(pCampo4,CONCAT(' + '''' + '.' + ''''  + ' , pValor4)));'
+   print  '		SET pS = CONCAT(pS , fnDevuelveCondicion(pCampo5,CONCAT(' + '''' + '.' + ''''  + ' , pValor5)));'
+   print  '		SET pS = CONCAT(pS , fnDevuelveCondicion(pCampo6,CONCAT(' + '''' + '.' + ''''  + ' , pValor6)));'
+   print  '		SET pS = CONCAT(pS , fnDevuelveCondicion(pCampo7,CONCAT(' + '''' + '.' + ''''  + ' , pValor7)));'
+  
+		if substring(@var_name, 1, 2) ='cl'
+		begin
+		 print 'set pS =CONCAT(' + '''' + 'SELECT  * from  vis'+ substring(@var_name, 3, len(@var_name))  + '''' + ' , pS);'--+ ' where FilaEstado = @dato or FilaEstado = 1' --+ @var_cadena_pe3 + ''
+		end
+		else
+		begin
+		 print 'set pS =CONCAT(' + '''' + 'SELECT  * from  vis'+ substring(@var_name, 4, len(@var_name))  + '''' + ' , pS);'--+ ' where FilaEstado = @dato or FilaEstado = 1' --+ @var_cadena_pe3 + ''
+		end
+  
+   print  'PREPARE stmt FROM pS;'
+   print  'EXECUTE stmt;'
+   print  'DEALLOCATE PREPARE stmt;'  
+
+print  'END$$'
+print  'DELIMITER ;'
+   
+print  ''
+   FETCH NEXT FROM tablas_Cursor into @var_name, @var_id
+END
+CLOSE tablas_Cursor
+DEALLOCATE tablas_Cursor

@@ -1,0 +1,24 @@
+H:\GeneradorWebServices\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.exe
+H:\GeneradorWebServices\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.pdb
+H:\GeneradorWebServices\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.exe
+H:\GeneradorWebServices\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.pdb
+H:\GeneradorWebServices\GeneradorCodigoControladoras\obj\Debug\ResolveAssemblyReference.cache
+H:\GeneradorWebServices\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.Form1.resources
+H:\GeneradorWebServices\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.Properties.Resources.resources
+H:\GeneradorWebServices\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.csproj.GenerateResource.Cache
+E:\gen\CodigoDirectoAplicacion\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.pdb
+E:\gen\CodigoDirectoAplicacion\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.exe
+E:\gen\CodigoDirectoAplicacion\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.pdb
+E:\gen\CodigoDirectoAplicacion\GeneradorCodigoControladoras\obj\Debug\ResolveAssemblyReference.cache
+E:\gen\CodigoDirectoAplicacion\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.Form1.resources
+E:\gen\CodigoDirectoAplicacion\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.Properties.Resources.resources
+E:\gen\CodigoDirectoAplicacion\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.csproj.GenerateResource.Cache
+E:\gen\CodigoDirectoAplicacion\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.exe
+C:\Documents and Settings\david.serrudo\Mis documentos\dav\otro\gen\cs\CodigoDirectoAplicacion\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.exe
+C:\Documents and Settings\david.serrudo\Mis documentos\dav\otro\gen\cs\CodigoDirectoAplicacion\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.pdb
+C:\Documents and Settings\david.serrudo\Mis documentos\dav\otro\gen\cs\CodigoDirectoAplicacion\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.exe
+C:\Documents and Settings\david.serrudo\Mis documentos\dav\otro\gen\cs\CodigoDirectoAplicacion\GeneradorCodigoControladoras\bin\Debug\GeneradorCodigoControladoras.pdb
+C:\Documents and Settings\david.serrudo\Mis documentos\dav\otro\gen\cs\CodigoDirectoAplicacion\GeneradorCodigoControladoras\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\david.serrudo\Mis documentos\dav\otro\gen\cs\CodigoDirectoAplicacion\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.Form1.resources
+C:\Documents and Settings\david.serrudo\Mis documentos\dav\otro\gen\cs\CodigoDirectoAplicacion\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.Properties.Resources.resources
+C:\Documents and Settings\david.serrudo\Mis documentos\dav\otro\gen\cs\CodigoDirectoAplicacion\GeneradorCodigoControladoras\obj\Debug\GeneradorCodigoControladoras.csproj.GenerateResource.Cache

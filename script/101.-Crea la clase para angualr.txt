@@ -1,0 +1,96 @@
+declare @nombreProcedimiento as varchar (50) = 'pertrnproveedor'
+--crea entidad a enviar
+
+declare @var_id as int 
+declare @var_name as varchar (50)
+declare @var_name_campo as varchar (50)
+declare @var_long as varchar (50)
+declare @var_AUX as varchar (50)
+declare @var_cadena as varchar (8000)
+declare @varCadenaImprime as varchar (8000)
+declare @varCadenaImprime1 as varchar (8000)
+declare @var_name_xtype as varchar (50)
+declare @var_name_xtype2 as varchar (50)
+declare @var_length int
+DECLARE tablas_Cursor CURSOR FOR
+--SELECT name, id FROM sysobjects where xtype= 'U' and name <> 'dtproperties' AND NAME <> 'sysdiagrams' and name not like 'TEMPORAL%' and  name not like 'trnTemp%' AND NAME != 'resultados' order by name--solo por lo de la base venecia
+SELECT name, id FROM sysobjects where name=@nombreProcedimiento
+OPEN tablas_Cursor
+FETCH NEXT FROM tablas_Cursor into @var_name, @var_id
+
+WHILE @@FETCH_STATUS = 0
+BEGIN
+     print 'export class Clase'+@var_name
+     print '{'
+    
+	set @var_cadena = ''
+	set @varCadenaImprime = ''
+	set @varCadenaImprime1 = ''
+	
+	DECLARE campos_Cursor CURSOR FOR
+	select a.name, b.name, a.length from syscolumns a, systypes b where a.xtype = b.xtype and a.id = @var_id  and b.name<>'sysname' and a.name not in ('FechaRegistro','EstadoRegistro')  and  a.name not like 'trnTemp%' order by a.colid
+	OPEN campos_Cursor
+	FETCH NEXT FROM campos_Cursor into @var_name_campo, @var_name_xtype, @var_length
+	WHILE @@FETCH_STATUS = 0
+	BEGIN
+		set @var_long = ''
+		set @var_name_xtype2=@var_name_xtype
+		IF(@var_name_xtype = 'bigint')
+		begin
+			set @var_name_xtype2='long'
+		end
+		IF(@var_name_xtype = 'datetime')
+		begin
+			set @var_name_xtype2='DateTime'
+		end
+		IF (@var_name_xtype = 'varchar') or (@var_name_xtype = 'nvarchar') or (@var_name_xtype = 'char')
+		begin
+			set @var_name_xtype2='string'
+		end
+		IF(@var_name_xtype = 'smalldatetime')
+		begin
+			set @var_name_xtype2='DateTime'
+		end
+		IF(@var_name_xtype = 'tinyint')
+		begin
+			set @var_name_xtype2='number'
+		end
+		IF(@var_name_xtype = 'smallint')
+		begin
+			set @var_name_xtype2='number'
+		end
+		IF(@var_name_xtype = 'varbinary')
+		begin
+			set @var_name_xtype2='string'
+		end
+		IF(@var_name_xtype = 'int')
+		begin
+			set @var_name_xtype2='number'
+		end
+		IF(@var_name_xtype = 'bit')
+		begin
+			set @var_name_xtype2='boolean'
+		end
+		IF(@var_name_xtype = 'money')
+		begin
+			set @var_name_xtype2='number'
+		end
+		SET @VAR_AUX = ' = NULL'
+		set @varCadenaImprime = @varCadenaImprime +@var_name_campo+':'+@var_name_xtype2+';' +CHAR(13) --+ @var_aux)   -- declara parametros
+		set @varCadenaImprime1 = @varCadenaImprime1 +'this.'+@var_name_campo+'='+@var_name_xtype2+';' +CHAR(13) --+ @var_aux)   -- declara parametros
+		
+		FETCH NEXT FROM campos_Cursor into @var_name_campo, @var_name_xtype, @var_length
+	END
+	CLOSE campos_Cursor
+	DEALLOCATE campos_Cursor
+   print @varCadenaImprime 
+   print 'constructor() {' 
+   print @varCadenaImprime1 + '}'
+   print '}'
+   FETCH NEXT FROM tablas_Cursor into @var_name, @var_id
+END
+CLOSE tablas_Cursor
+DEALLOCATE tablas_Cursor
+GO
+--cerramos porcedimiento generico
+
