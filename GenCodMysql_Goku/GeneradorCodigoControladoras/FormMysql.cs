@@ -547,7 +547,7 @@ namespace GeneradorCodigoControladoras
             NombreTablaSQL = LBTablas.SelectedValue.ToString();
             RTBCodigoGenerado.Text += "<?php" + Environment.NewLine;
             RTBCodigoGenerado.Text += "//gen " + DateTime.Now + " dst" + Environment.NewLine;
-            RTBCodigoGenerado.Text += "class " + NombreTabla + "_Ctrl" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "class " + LBTablas.SelectedValue.ToString() + "_Ctrl" + Environment.NewLine;
             RTBCodigoGenerado.Text += "{" + Environment.NewLine;
             //RTBCodigoGenerado.Text += "public $M_" + NombreTabla + " = null;" + Environment.NewLine;
             RTBCodigoGenerado.Text += "public $M_Usuariologueado = null;";
@@ -582,7 +582,7 @@ namespace GeneradorCodigoControladoras
             RTBCodigoGenerado.Text += "$pCampo7 = is_null($f3->get('POST.pCampo7')) ? 'T' : $f3->get('POST.pCampo7');" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$pValor7 = is_null($f3->get('POST.pValor7')) ? '' : $f3->get('POST.pValor7');" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$oDav_Ctrol = new _Dav_Ctrol();" + Environment.NewLine;
-            RTBCodigoGenerado.Text += "$Con = $oDav_Ctrol->fnDevuelveConsulta('vis" + NombreTablaSQL.ToLower() + "' , $pCampo0  , $pValor0  , $pCampo1  , $pValor1  , $pCampo2  , $pValor2  , $pCampo3  , $pValor3  , $pCampo4  , $pValor4  , $pCampo5  , $pValor5  , $pCampo6  , $pValor6  , $pCampo7  , $pValor7 );" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "$Con = $oDav_Ctrol->fnDevuelveConsulta('" + NombreTablaSQL.Substring(0,4)+"vis"+ NombreTabla + "' , $pCampo0  , $pValor0  , $pCampo1  , $pValor1  , $pCampo2  , $pValor2  , $pCampo3  , $pValor3  , $pCampo4  , $pValor4  , $pCampo5  , $pValor5  , $pCampo6  , $pValor6  , $pCampo7  , $pValor7 );" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$sql = $Con;" + Environment.NewLine;
 
             //RTBCodigoGenerado.Text += "$sql = " + commilla + "CALL pvi" + NombreTabla + "('" + commilla + " . $pCampo0 . " + commilla + "','" + commilla + ". $pValor0 . " + commilla + "','" + commilla + ". $pCampo1 . " + commilla + "','" + commilla + ". $pValor1 . " + commilla + "','" + commilla + ". $pCampo2 . " + commilla + "','" + commilla + ". $pValor2 . " + commilla + "','" + commilla + ". $pCampo3 . " + commilla + "','" + commilla + ". $pValor3 . " + commilla + "','" + commilla + ". $pCampo4 . " + commilla + "','" + commilla + ". $pValor4 . " + commilla + "','" + commilla + ". $pCampo5 . " + commilla + "','" + commilla + ". $pValor5 . " + commilla + "','" + commilla + ". $pCampo6 . " + commilla + "','" + commilla + ". $pValor6 . " + commilla + "','" + commilla + ". $pCampo7 . " + commilla + "','" + commilla + ". $pValor7 . " + commilla + "'); " + commilla + "; " + Environment.NewLine;
@@ -602,7 +602,7 @@ namespace GeneradorCodigoControladoras
             RTBCodigoGenerado.Text += "echo json_encode('{" + commilla + "error" + commilla + " : { " + commilla + "text" + commilla + ":' . $e->getMessage() . '}');" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$resulto = $f3->get('DB')->exec($sql);" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$items = array();" + Environment.NewLine;
-            RTBCodigoGenerado.Text += "$msg = '" + NombreTabla + " seleccionadas';" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "$msg = '500';" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$items = $resulto;" + Environment.NewLine;
             RTBCodigoGenerado.Text += "echo json_encode([" + Environment.NewLine;
             RTBCodigoGenerado.Text += "'mesaje' => $msg," + Environment.NewLine;
@@ -640,7 +640,7 @@ namespace GeneradorCodigoControladoras
             {
                 RTBCodigoGenerado.Text += "$" + this.ImportarSQL.ColumnasI[i] + " = is_null($f3->get('POST.p" + this.ImportarSQL.ColumnasI[i] + "')) ? 'T' : $f3->get('POST.p" + this.ImportarSQL.ColumnasI[i] + "');" + Environment.NewLine;
             }
-            RTBCodigoGenerado.Text += "$sql = " + commilla + "CALL pcru" + NombreTabla + "('" + commilla + " . $Tipo . " + commilla + "','" + commilla;
+            RTBCodigoGenerado.Text += "$sql = " + commilla + "CALL "+ NombreTablaSQL.Substring(0,4)+"pag" + NombreTabla + "('" + commilla + " . $Tipo . " + commilla + "','" + commilla;
             for (int i = 0; i <= this.ImportarSQL.ColumnasI.Count - 1; i++)
             {
                 RTBCodigoGenerado.Text += ". $" + this.ImportarSQL.ColumnasI[i];
@@ -651,7 +651,7 @@ namespace GeneradorCodigoControladoras
             RTBCodigoGenerado.Text += "try {" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$resulto = $f3->get('DB')->exec($sql);" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$items = array();" + Environment.NewLine;
-            RTBCodigoGenerado.Text += "$msg = 'add " + NombreTabla + "';" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "$msg = '200';" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$items = $resulto;" + Environment.NewLine;
             RTBCodigoGenerado.Text += "echo json_encode([" + Environment.NewLine;
             RTBCodigoGenerado.Text += "'mesaje' => $msg," + Environment.NewLine;
@@ -663,7 +663,7 @@ namespace GeneradorCodigoControladoras
             RTBCodigoGenerado.Text += "echo json_encode('{" + commilla + "error" + commilla + " : { " + commilla + "text" + commilla + ":' . $e->getMessage() . '}');" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$resulto = $f3->get('DB')->exec($sql);" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$items = array();" + Environment.NewLine;
-            RTBCodigoGenerado.Text += "$msg = '" + NombreTabla + " registrada';" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "$msg = '500';" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$items = $resulto;" + Environment.NewLine;
             RTBCodigoGenerado.Text += "echo json_encode([" + Environment.NewLine;
             RTBCodigoGenerado.Text += "'mesaje' => $msg," + Environment.NewLine;
@@ -698,7 +698,7 @@ namespace GeneradorCodigoControladoras
             {
                 RTBCodigoGenerado.Text += "$" + this.ImportarSQL.ColumnasI[i] + " = is_null($f3->get('POST.p" + this.ImportarSQL.ColumnasI[i] + "')) ? 'T' : $f3->get('POST.p" + this.ImportarSQL.ColumnasI[i] + "');" + Environment.NewLine;
             }
-            RTBCodigoGenerado.Text += "$sql = " + commilla + "CALL pcru" + NombreTabla + "('" + commilla + " . $Tipo . " + commilla + "','" + commilla;
+            RTBCodigoGenerado.Text += "$sql = " + commilla + "CALL " +NombreTablaSQL.Substring(0, 4) + "pag" + NombreTabla + "('" + commilla + " . $Tipo . " + commilla + "','" + commilla;
             for (int i = 0; i <= this.ImportarSQL.ColumnasI.Count - 1; i++)
             {
                 RTBCodigoGenerado.Text += ". $" + this.ImportarSQL.ColumnasI[i];
@@ -709,7 +709,7 @@ namespace GeneradorCodigoControladoras
             RTBCodigoGenerado.Text += "try {" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$resulto = $f3->get('DB')->exec($sql);" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$items = array();" + Environment.NewLine;
-            RTBCodigoGenerado.Text += "$msg = 'get" + NombreTabla + "';" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "$msg = '200';" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$items = $resulto;" + Environment.NewLine;
             RTBCodigoGenerado.Text += "echo json_encode([" + Environment.NewLine;
             RTBCodigoGenerado.Text += "'mesaje' => $msg," + Environment.NewLine;
@@ -721,7 +721,7 @@ namespace GeneradorCodigoControladoras
             RTBCodigoGenerado.Text += "echo json_encode('{" + commilla + "error" + commilla + " : { " + commilla + "text" + commilla + ":' . $e->getMessage() . '}');" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$resulto = $f3->get('DB')->exec($sql);" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$items = array();" + Environment.NewLine;
-            RTBCodigoGenerado.Text += "$msg = '" + NombreTabla + " encontrada';" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "$msg = '500';" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$items = $resulto;" + Environment.NewLine;
             RTBCodigoGenerado.Text += "echo json_encode([" + Environment.NewLine;
             RTBCodigoGenerado.Text += "'mesaje' => $msg," + Environment.NewLine;
@@ -756,7 +756,7 @@ namespace GeneradorCodigoControladoras
             {
                 RTBCodigoGenerado.Text += "$" + this.ImportarSQL.ColumnasI[i] + " = is_null($f3->get('POST.p" + this.ImportarSQL.ColumnasI[i] + "')) ? 'T' : $f3->get('POST.p" + this.ImportarSQL.ColumnasI[i] + "');" + Environment.NewLine;
             }
-            RTBCodigoGenerado.Text += "$sql = " + commilla + "CALL pcru" + NombreTabla + "('" + commilla + " . $Tipo . " + commilla + "','" + commilla;
+            RTBCodigoGenerado.Text += "$sql = " + commilla + "CALL "+ NombreTablaSQL.Substring(0, 4) + "pag" + NombreTabla + "('" + commilla + " . $Tipo . " + commilla + "','" + commilla;
             for (int i = 0; i <= this.ImportarSQL.ColumnasI.Count - 1; i++)
             {
                 RTBCodigoGenerado.Text += ". $" + this.ImportarSQL.ColumnasI[i];
@@ -767,7 +767,7 @@ namespace GeneradorCodigoControladoras
             RTBCodigoGenerado.Text += "try {" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$resulto = $f3->get('DB')->exec($sql);" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$items = array();" + Environment.NewLine;
-            RTBCodigoGenerado.Text += "$msg = 'update " + NombreTabla + "';" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "$msg = '200';" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$items = $resulto;" + Environment.NewLine;
             RTBCodigoGenerado.Text += "echo json_encode([" + Environment.NewLine;
             RTBCodigoGenerado.Text += "'mesaje' => $msg," + Environment.NewLine;
@@ -779,7 +779,7 @@ namespace GeneradorCodigoControladoras
             RTBCodigoGenerado.Text += "echo json_encode('{" + commilla + "error" + commilla + " : { " + commilla + "text" + commilla + ":' . $e->getMessage() . '}');" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$resulto = $f3->get('DB')->exec($sql);" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$items = array();" + Environment.NewLine;
-            RTBCodigoGenerado.Text += "$msg = '" + NombreTabla + " encontrada';" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "$msg = '500';" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$items = $resulto;" + Environment.NewLine;
             RTBCodigoGenerado.Text += "echo json_encode([" + Environment.NewLine;
             RTBCodigoGenerado.Text += "'mesaje' => $msg," + Environment.NewLine;
@@ -804,7 +804,7 @@ namespace GeneradorCodigoControladoras
             RTBCodigoGenerado.Text += "}" + Environment.NewLine;
             //personazalida
             RTBCodigoGenerado.Text += "" + Environment.NewLine;
-            RTBCodigoGenerado.Text += "public function pap" + NombreTabla + "($f3)" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "public function "+NombreTablaSQL.Substring(0,4)+"pap" + NombreTabla + "($f3)" + Environment.NewLine;
             RTBCodigoGenerado.Text += "{" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$idusuario = is_null($f3->get('POST.idusuario')) ? 'T' : $f3->get('POST.idusuario');" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$llave = is_null($f3->get('POST.llave')) ? 'T' : $f3->get('POST.llave');" + Environment.NewLine;
@@ -826,7 +826,7 @@ namespace GeneradorCodigoControladoras
             RTBCodigoGenerado.Text += "try {" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$resulto = $f3->get('DB')->exec($sql);" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$items = array();" + Environment.NewLine;
-            RTBCodigoGenerado.Text += "$msg = 'update " + NombreTabla + "';" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "$msg = '200';" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$items = $resulto;" + Environment.NewLine;
             RTBCodigoGenerado.Text += "echo json_encode([" + Environment.NewLine;
             RTBCodigoGenerado.Text += "'mesaje' => $msg," + Environment.NewLine;
@@ -838,7 +838,7 @@ namespace GeneradorCodigoControladoras
             RTBCodigoGenerado.Text += "echo json_encode('{" + commilla + "error" + commilla + " : { " + commilla + "text" + commilla + ":' . $e->getMessage() . '}');" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$resulto = $f3->get('DB')->exec($sql);" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$items = array();" + Environment.NewLine;
-            RTBCodigoGenerado.Text += "$msg = '" + NombreTabla + " encontrada';" + Environment.NewLine;
+            RTBCodigoGenerado.Text += "$msg = '500';" + Environment.NewLine;
             RTBCodigoGenerado.Text += "$items = $resulto;" + Environment.NewLine;
             RTBCodigoGenerado.Text += "echo json_encode([" + Environment.NewLine;
             RTBCodigoGenerado.Text += "'mesaje' => $msg," + Environment.NewLine;
@@ -1266,8 +1266,10 @@ namespace GeneradorCodigoControladoras
                 CrearLasControladoras();
                 if (ImportarSQL.tablaNombre.ToString() != "dtproperties")
                 {
-                    RTBCodigoGenerado.SaveFile(directorio + "\\controladores\\" + (CultureInfo.InvariantCulture.TextInfo.ToTitleCase(NombreTabla)) + "_Ctrl.php", RichTextBoxStreamType.PlainText);
-                    RTBCodigoGenerado.SaveFile(directorio + "\\controladores\\" + (CultureInfo.InvariantCulture.TextInfo.ToTitleCase(NombreTabla)) + "_Ctrl.php", RichTextBoxStreamType.PlainText);
+                    //RTBCodigoGenerado.SaveFile(directorio + "\\controladores\\" + (CultureInfo.InvariantCulture.TextInfo.ToTitleCase(NombreTabla)) + "_Ctrl.php", RichTextBoxStreamType.PlainText);
+                    //RTBCodigoGenerado.SaveFile(directorio + "\\controladores\\" + (CultureInfo.InvariantCulture.TextInfo.ToTitleCase(NombreTabla)) + "_Ctrl.php", RichTextBoxStreamType.PlainText);
+                    RTBCodigoGenerado.SaveFile(directorio + "\\controladores\\" + LBTablas.SelectedValue.ToString() + "_Ctrl.php", RichTextBoxStreamType.PlainText);
+                    RTBCodigoGenerado.SaveFile(directorio + "\\controladores\\" + LBTablas.SelectedValue.ToString() + "_Ctrl.php", RichTextBoxStreamType.PlainText);
                 }
 
             }
@@ -1329,14 +1331,15 @@ namespace GeneradorCodigoControladoras
                 //else
                 //    NombreTabla = (CultureInfo.InvariantCulture.TextInfo.ToTitleCase(LBTablas.SelectedValue.ToString()));
                 NombreTabla = (CultureInfo.InvariantCulture.TextInfo.ToTitleCase(LBTablas.SelectedValue.ToString())).ToLower();
-                
+                string NombreTablaSQL = "";
+                acronimoretorna(ref NombreTablaSQL, NombreTabla);
                 for (int i = 0; i <= this.ImportarSQL.ColumnasI.Count - 1; i++)
                 {
                     this.LBCampos.Items.Add(this.ImportarSQL.ColumnasI[i]);
                     this.LBCampos.Items.Add(this.ImportarSQL.TypoColumnasI[i]);
                 }
                 RTBCodigoGenerado.Text += "DELIMITER //" + Environment.NewLine;
-                RTBCodigoGenerado.Text += "CREATE PROCEDURE `pcru" + NombreTabla + "`(" + Environment.NewLine;
+                RTBCodigoGenerado.Text += "CREATE PROCEDURE `"+ NombreTabla.Substring(0,4)+"pag" + NombreTablaSQL + "`(" + Environment.NewLine;
                 RTBCodigoGenerado.Text += "IN `pTipo` VARCHAR(1)," + Environment.NewLine;
                 //trabajando
                 for (int i = 0; i <= this.ImportarSQL.ColumnasI.Count - 1; i++)
@@ -1362,7 +1365,7 @@ namespace GeneradorCodigoControladoras
                 //read
                 RTBCodigoGenerado.Text += "IF pTipo = 'R' then" + Environment.NewLine;
                 //RTBCodigoGenerado.Text += "SELECT * FROM " + NombreTabla + " WHERE p" + this.ImportarSQL.ColumnasI[0].ToString() + "=" + this.ImportarSQL.ColumnasI[0].ToString() + " AND filaestado=1;" + Environment.NewLine;
-                RTBCodigoGenerado.Text += "SELECT * FROM " + NombreTabla + " WHERE p" + this.ImportarSQL.ColumnasI[0].ToString() + "=" + this.ImportarSQL.ColumnasI[0].ToString() + ";" + Environment.NewLine;
+                RTBCodigoGenerado.Text += "SELECT * FROM " + NombreTabla + " WHERE p" + this.ImportarSQL.ColumnasI[0].ToString() + "=" + this.ImportarSQL.ColumnasI[0].ToString() + " and estadoregistro=1;" + Environment.NewLine;
                 RTBCodigoGenerado.Text += "END IF;" + Environment.NewLine;
                 //update
                 RTBCodigoGenerado.Text += "IF pTipo = 'U' then" + Environment.NewLine;
@@ -1395,11 +1398,11 @@ namespace GeneradorCodigoControladoras
                 //    NombreTabla = (CultureInfo.InvariantCulture.TextInfo.ToTitleCase(LBTablas.SelectedValue.ToString().Substring(6)));
                 acronimoretorna(ref NombreTabla, LBTablas.SelectedValue.ToString());
                 RTBCodigoGenerado.Text += "#" + NombreTabla + "s" + Environment.NewLine;
-                RTBCodigoGenerado.Text += "POST /sel" + NombreTabla + " = " + NombreTabla + "_Ctrl->sel" + NombreTabla + Environment.NewLine;
-                RTBCodigoGenerado.Text += "POST /add" + NombreTabla + " = " + NombreTabla + "_Ctrl->add" + NombreTabla + Environment.NewLine;
-                RTBCodigoGenerado.Text += "POST /get" + NombreTabla + " = " + NombreTabla + "_Ctrl->get" + NombreTabla + Environment.NewLine;
-                RTBCodigoGenerado.Text += "POST /upd" + NombreTabla + " = " + NombreTabla + "_Ctrl->upd" + NombreTabla + Environment.NewLine;
-                RTBCodigoGenerado.Text += "POST /pap" + NombreTabla + " = " + NombreTabla + "_Ctrl->pap" + NombreTabla + Environment.NewLine;
+                RTBCodigoGenerado.Text += "POST /sel" + NombreTabla + " = " + LBTablas.SelectedValue.ToString() + "_Ctrl->sel" + NombreTabla + Environment.NewLine;
+                RTBCodigoGenerado.Text += "POST /add" + NombreTabla + " = " +  LBTablas.SelectedValue.ToString() + "_Ctrl->add" + NombreTabla + Environment.NewLine;
+                RTBCodigoGenerado.Text += "POST /get" + NombreTabla + " = " +  LBTablas.SelectedValue.ToString() + "_Ctrl->get" + NombreTabla + Environment.NewLine;
+                RTBCodigoGenerado.Text += "POST /upd" + NombreTabla + " = " +  LBTablas.SelectedValue.ToString() + "_Ctrl->upd" + NombreTabla + Environment.NewLine;
+                RTBCodigoGenerado.Text += "POST /pap" + NombreTabla + " = " +  LBTablas.SelectedValue.ToString() + "_Ctrl->pap" + NombreTabla + Environment.NewLine;
             }
             RTBCodigoGenerado.SaveFile(directorio + "\\routes.ini", RichTextBoxStreamType.PlainText);
             RTBCodigoGenerado.SaveFile(directorio + "\\routes.ini", RichTextBoxStreamType.PlainText);
