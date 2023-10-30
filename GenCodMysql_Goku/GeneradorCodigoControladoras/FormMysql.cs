@@ -1338,6 +1338,7 @@ namespace GeneradorCodigoControladoras
                     this.LBCampos.Items.Add(this.ImportarSQL.ColumnasI[i]);
                     this.LBCampos.Items.Add(this.ImportarSQL.TypoColumnasI[i]);
                 }
+                //dav
                 RTBCodigoGenerado.Text += "DELIMITER //" + Environment.NewLine;
                 RTBCodigoGenerado.Text += "CREATE PROCEDURE `"+ NombreTabla.Substring(0,4)+"pag" + NombreTablaSQL + "`(" + Environment.NewLine;
                 RTBCodigoGenerado.Text += "IN `pTipo` VARCHAR(1)," + Environment.NewLine;
