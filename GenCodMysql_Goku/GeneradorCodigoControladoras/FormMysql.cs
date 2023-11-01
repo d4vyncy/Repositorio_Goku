@@ -1138,14 +1138,14 @@ namespace GeneradorCodigoControladoras
                 MessageBox.Show("No se encontro la ruta para guardar este archivo");
             }
         }
-        public string ParametroAcronimo = "uni_tbl";
+        public string ParametroAcronimo = "_tbl";
         private void acronimoretorna(ref string NombreTabla,string NombreTablaOrigen)
         {
-            //LBTablas.SelectedValue.ToString().Substring(0, 3)
-            if (NombreTablaOrigen.Substring(0, 7) == ParametroAcronimo)
-                NombreTabla = NombreTablaOrigen.Substring(7);
-            else
-                NombreTabla = NombreTablaOrigen.Substring(6);
+            //if (NombreTablaOrigen.Substring(0, 7) == ParametroAcronimo)
+            //    NombreTabla = NombreTablaOrigen.Substring(7);
+            //else
+            //    NombreTabla = NombreTablaOrigen.Substring(7);
+            NombreTabla = NombreTablaOrigen.Substring(7);
         }
         private void BTGenerarAutomaticamente_Click(object sender, EventArgs e)
         {

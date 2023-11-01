@@ -36,7 +36,7 @@ namespace GeneradorCodigoControladoras.Entidades
             string Sql = "SELECT " + '\n' +
                 "TABLE_SCHEMA, TABLE_NAME FROM INFORMATION_SCHEMA.TABLES " + '\n' +
                 "WHERE " + '\n' +
-                "TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME<>'dtproperties' AND TABLE_NAME<>'sysdiagrams' and TABLE_NAME like '"+ ParametroAcronimo + "%' " + '\n';
+                "TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME<>'dtproperties' AND TABLE_NAME<>'sysdiagrams' and TABLE_NAME like '%"+ ParametroAcronimo + "%' " + '\n';
             //Condicion --solo para la bd valorados
             //Sql += "and TABLE_NAME in ('trnIngreso','trnSalida','trnbaja','trndevolucion','trnfaltante','trnfallaimprenta','trnfallaimpresion','trndescargo','trnrequerimiento')";
             //Sql += " and TABLE_NAME<>'trnAperturaCierreCaja' and TABLE_NAME<>'trnTarjetaParaControlDeExistencias'"; // and TABLE_NAME<>'trnUsuarioEntidadOD'";
@@ -60,7 +60,7 @@ namespace GeneradorCodigoControladoras.Entidades
                 "WHERE " + '\n' +
                 "TABLE_NAME<>'information_schema'" +
                 " AND TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME<>'dtproperties' AND TABLE_NAME<>'sysdiagrams' " + '\n'
-           + " and TABLE_SCHEMA = '" + baseDatos + "'" + "AND TABLE_NAME like '"+ ParametroAcronimo + "%' " + ";";
+           + " and TABLE_SCHEMA = '" + baseDatos + "'" + "AND TABLE_NAME like '%"+ ParametroAcronimo + "%' " + ";";
             //Condicion --solo para la bd valorados
             //Sql += "and TABLE_NAME in ('trnIngreso','trnSalida','trnbaja','trndevolucion','trnfaltante','trnfallaimprenta','trnfallaimpresion','trndescargo','trnrequerimiento')";
             //Sql += " and TABLE_NAME<>'trnAperturaCierreCaja' and TABLE_NAME<>'trnTarjetaParaControlDeExistencias'"; // and TABLE_NAME<>'trnUsuarioEntidadOD'";

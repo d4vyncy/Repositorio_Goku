@@ -359,7 +359,7 @@
             this.TXTPass.PasswordChar = '*';
             this.TXTPass.Size = new System.Drawing.Size(184, 20);
             this.TXTPass.TabIndex = 17;
-            this.TXTPass.Text = "Ls:uh|vbj2=";
+            this.TXTPass.Text = "J*v7DbKmhCT#hxM";
             // 
             // label16
             // 
@@ -383,7 +383,7 @@
             this.TXTUser.Name = "TXTUser";
             this.TXTUser.Size = new System.Drawing.Size(184, 20);
             this.TXTUser.TabIndex = 16;
-            this.TXTUser.Text = "u765344825_davidserrudo09";
+            this.TXTUser.Text = "u765344825_davidserrudo";
             // 
             // TXTWebservices
             // 
@@ -391,7 +391,7 @@
             this.TXTWebservices.Name = "TXTWebservices";
             this.TXTWebservices.Size = new System.Drawing.Size(115, 20);
             this.TXTWebservices.TabIndex = 36;
-            this.TXTWebservices.Text = "u765344825_sistema";
+            this.TXTWebservices.Text = "u765344825_sistemaclinica";
             // 
             // label6
             // 
