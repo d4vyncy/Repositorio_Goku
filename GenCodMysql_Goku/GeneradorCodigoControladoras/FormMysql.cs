@@ -950,7 +950,7 @@ namespace GeneradorCodigoControladoras
             for (int i = 0; i <= this.ImportarSQL.ColumnasI.Count - 1; i++)
             {
                 if (this.ImportarSQL.ColumnasI[i].ToString().Contains("fecha"))
-                    RTBCodigoGenerado.Text += "body = body.set('p" + this.ImportarSQL.ColumnasI[i] + "', this.datepipe.transform(" + NombreTabla.ToLower() + "." + this.ImportarSQL.ColumnasI[i] + ", 'yyyy-MM-dd HH:mm:ss'));";
+                    RTBCodigoGenerado.Text += "body = body.set('p" + this.ImportarSQL.ColumnasI[i] + "', this.datepipe.transform(" + NombreTabla.ToLower() + "." + this.ImportarSQL.ColumnasI[i] + ", 'yyyy-MM-dd HH:mm:ss')||'');";
                 else
                     RTBCodigoGenerado.Text += "body = body.set('p" + this.ImportarSQL.ColumnasI[i] + "', " + NombreTabla.ToLower() + "." + this.ImportarSQL.ColumnasI[i] + ".toString());";
             }
@@ -991,7 +991,7 @@ namespace GeneradorCodigoControladoras
             for (int i = 0; i <= this.ImportarSQL.ColumnasI.Count - 1; i++)
             {
                 if (this.ImportarSQL.ColumnasI[i].ToString().Contains("fecha"))
-                    RTBCodigoGenerado.Text += "body = body.set('p" + this.ImportarSQL.ColumnasI[i] + "', this.datepipe.transform(" + NombreTabla.ToLower() + "." + this.ImportarSQL.ColumnasI[i] + ", 'yyyy-MM-dd HH:mm:ss'));";
+                    RTBCodigoGenerado.Text += "body = body.set('p" + this.ImportarSQL.ColumnasI[i] + "', this.datepipe.transform(" + NombreTabla.ToLower() + "." + this.ImportarSQL.ColumnasI[i] + ", 'yyyy-MM-dd HH:mm:ss')||'');";
                 else
                     RTBCodigoGenerado.Text += "body = body.set('p" + this.ImportarSQL.ColumnasI[i] + "', " + NombreTabla.ToLower() + "." + this.ImportarSQL.ColumnasI[i] + ".toString());";
             }
@@ -1032,7 +1032,7 @@ namespace GeneradorCodigoControladoras
             for (int i = 0; i <= this.ImportarSQL.ColumnasI.Count - 1; i++)
             {
                 if (this.ImportarSQL.ColumnasI[i].ToString().Contains("fecha"))
-                    RTBCodigoGenerado.Text += "body = body.set('p" + this.ImportarSQL.ColumnasI[i] + "', this.datepipe.transform(" + NombreTabla.ToLower() + "." + this.ImportarSQL.ColumnasI[i] + ", 'yyyy-MM-dd HH:mm:ss'));";
+                    RTBCodigoGenerado.Text += "body = body.set('p" + this.ImportarSQL.ColumnasI[i] + "', this.datepipe.transform(" + NombreTabla.ToLower() + "." + this.ImportarSQL.ColumnasI[i] + ", 'yyyy-MM-dd HH:mm:ss')||'');";
                 else
                     RTBCodigoGenerado.Text += "body = body.set('p" + this.ImportarSQL.ColumnasI[i] + "', " + NombreTabla.ToLower() + "." + this.ImportarSQL.ColumnasI[i] + ".toString());";
             }
@@ -1075,7 +1075,7 @@ namespace GeneradorCodigoControladoras
             for (int i = 0; i <= this.ImportarSQL.ColumnasI.Count - 1; i++)
             {
                 if (this.ImportarSQL.ColumnasI[i].ToString().Contains("fecha"))
-                    RTBCodigoGenerado.Text += "body = body.set('p" + this.ImportarSQL.ColumnasI[i] + "', this.datepipe.transform(" + NombreTabla.ToLower() + "." + this.ImportarSQL.ColumnasI[i] + ", 'yyyy-MM-dd HH:mm:ss'));";
+                    RTBCodigoGenerado.Text += "body = body.set('p" + this.ImportarSQL.ColumnasI[i] + "', this.datepipe.transform(" + NombreTabla.ToLower() + "." + this.ImportarSQL.ColumnasI[i] + ", 'yyyy-MM-dd HH:mm:ss')||'');";
                 else
                     RTBCodigoGenerado.Text += "body = body.set('p" + this.ImportarSQL.ColumnasI[i] + "', " + NombreTabla.ToLower() + "." + this.ImportarSQL.ColumnasI[i] + ".toString());";
             }
