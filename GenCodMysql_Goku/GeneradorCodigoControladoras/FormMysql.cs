@@ -1340,6 +1340,7 @@ namespace GeneradorCodigoControladoras
                 }
                 //dav
                 RTBCodigoGenerado.Text += "DELIMITER //" + Environment.NewLine;
+                RTBCodigoGenerado.Text += "DROP PROCEDURE IF EXISTS `" + NombreTabla.Substring(0, 4) + "pag" + NombreTablaSQL + "`;" + Environment.NewLine;
                 RTBCodigoGenerado.Text += "CREATE PROCEDURE `"+ NombreTabla.Substring(0,4)+"pag" + NombreTablaSQL + "`(" + Environment.NewLine;
                 RTBCodigoGenerado.Text += "IN `pTipo` VARCHAR(1)," + Environment.NewLine;
                 //trabajando
@@ -1356,11 +1357,11 @@ namespace GeneradorCodigoControladoras
                 for (int i = 0; i <= this.ImportarSQL.ColumnasI.Count - 1; i++)
                     RTBCodigoGenerado.Text += this.ImportarSQL.ColumnasI[i] + ",";
                 //RTBCodigoGenerado.Text += "fecharegistro,filaestado)	values (" + Environment.NewLine;
-                RTBCodigoGenerado.Text = RTBCodigoGenerado.Text.Substring(0, RTBCodigoGenerado.Text.Length-1)+")	values (" + Environment.NewLine;
+                RTBCodigoGenerado.Text = RTBCodigoGenerado.Text.Substring(0, RTBCodigoGenerado.Text.Length-1)+",fecharegistro,estadoregistro)	values (" + Environment.NewLine;
                 for (int i = 0; i <= this.ImportarSQL.ColumnasI.Count - 1; i++)
                     RTBCodigoGenerado.Text += "p" + this.ImportarSQL.ColumnasI[i] + ",";
                 //RTBCodigoGenerado.Text += "NOW(),1);" + Environment.NewLine;
-                RTBCodigoGenerado.Text = RTBCodigoGenerado.Text.Substring(0, RTBCodigoGenerado.Text.Length - 1) + ");" + Environment.NewLine;
+                RTBCodigoGenerado.Text = RTBCodigoGenerado.Text.Substring(0, RTBCodigoGenerado.Text.Length - 1) + ",now(),1);" + Environment.NewLine;
                 RTBCodigoGenerado.Text += "SELECT p" + this.ImportarSQL.ColumnasI[0].ToString() + " AS " + this.ImportarSQL.ColumnasI[0].ToString() + ";" + Environment.NewLine;
                 RTBCodigoGenerado.Text += "END IF;" + Environment.NewLine;
                 //read
